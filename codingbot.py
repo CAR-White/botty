@@ -14,7 +14,7 @@ with open("anime_titles.json", "r") as file:
 with open("anime_details.json", "r") as file:
     anime_details = json.load(file)
 
-anime_dict = {anime['title']: anime for anime in anime_details}
+anime_dict = {anime['title'].lower(): anime for anime in anime_details}
 
 @bot.command()
 async def hello(ctx):
@@ -36,6 +36,7 @@ async def sendembed(ctx):
 
 @bot.command(name="anime")
 async def anime(ctx, *, query: str):
+    query = query.lower()
     if query in anime_dict:
         anime = anime_dict[query]
         response = (
