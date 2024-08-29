@@ -6,7 +6,7 @@ bot = commands.Bot(command_prefix = "." , intents = discord.Intents.all())
 
 @bot.event
 async def on_ready():
-    print("CHAZZA IS HERE!")
+    print("CHAZZA WHITE IS HERE!")
 
 with open("anime_titles.json", "r") as file:
     anime_titles = json.load(file)
