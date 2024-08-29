@@ -164,5 +164,3 @@ cython_debug/
 # Exclude json files
 *.json
 
-# Exclude token.txt
-token.txt
